@@ -89,6 +89,7 @@ impl EvaluationGrid {
 			.into_iter()
 			.map(|(id, datas)| {
 				let enc = datas.encode();
+				println!("enc len: {:?}", enc.len());
 				enc.chunks(DATA_CHUNK_SIZE)
 					.map(pad_to_bls_scalar)
 					.collect::<Result<Vec<_>, _>>()
