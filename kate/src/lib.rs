@@ -44,7 +44,7 @@ pub mod config {
 	pub const MAX_BLOCK_ROWS: BlockLengthRows = if cfg!(feature = "extended-columns") {
 		BlockLengthRows(128)
 	} else {
-		BlockLengthRows(256)
+		BlockLengthRows(1024)
 	};
 	pub const MAX_BLOCK_COLUMNS: BlockLengthColumns = if cfg!(feature = "extended-columns") {
 		BlockLengthColumns(512)
